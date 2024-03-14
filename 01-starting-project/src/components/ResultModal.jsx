@@ -17,7 +17,7 @@ const ResultModal = forwardRef(function ResultModal(
   });
 
   return (
-    <dialog ref={dialog} className="result-modal">
+    <dialog ref={dialog} className="result-modal" onClose={onReset}>
       {userLost && <p>You lost!</p>}
       {!userLost && <p>Your score: {score}.</p>}
       <p>
